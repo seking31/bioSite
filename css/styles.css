@@ -25,6 +25,7 @@ body {
     padding-bottom: 15px;
 }
 
+/* Hero Image */
 .hero {
     height: 100vh;
     background: url('/images/ball.jpg') no-repeat center center/cover;
@@ -40,8 +41,9 @@ body {
 .hero-text {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem 2rem;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: xxx-large;
+    color: #f28d35;
 }
 
 /* Style rules for navigation area */
@@ -109,6 +111,9 @@ footer a {
 }
 
 
+
+/* styling */
+
 section {
     padding: 20px;
     background-color: #fff;
@@ -117,9 +122,16 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Header styling */
+figcaption {
+    color: #4477a6;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+}
 
-
+figcaption:hover {
+    color: #f28d35;
+}
 
 /* Gallery styling */
 .grid-gallery {
@@ -141,6 +153,7 @@ section {
 .grid-gallery img:hover {
     transform: scale(1.05);
 }
+
 
 /*
 columns / rows
