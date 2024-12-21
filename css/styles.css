@@ -7,7 +7,7 @@
 /* Style rules for body and images */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", serif;
     margin: 0;
     padding: 0;
     justify-content: center;
@@ -15,12 +15,28 @@ body {
     background-color: #f9f8f7;
     display: flex;
     flex-direction: column;
+    background-image: linear-gradient(red, yellow);
 }
 
 .centered-text {
     font-size: 24px;
     text-align: center;
-    color: #333;
+    color: #0b4983;
+    line-height: 1.5;
+    padding-bottom: 15px;
+}
+
+.centered-text-white {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+    padding-bottom: 15px;
+}
+
+.not-centered-text {
+    font-size: 24px;
+    color: #0b4983;
     line-height: 1.5;
     padding-bottom: 15px;
 }
@@ -61,16 +77,29 @@ nav ul {
 nav li {
     display: inline-block;
     font-size: 1.5em;
-    font-family: Geneva, Arial, sans-serif;
     font-weight: bold;
-    border-top: 0.5px solid #f6eee4;
+    font-family: "Doto", serif;
+    font-style: normal;
 }
 
 nav li a {
     display: block;
-    color: #f6eee4;
+    color: #f28d35;
     padding: 0.5em 2em;
-    text-decoration: none;
+    text-decoration: underline;
+}
+
+/* A bunch of pseudo-classes */
+nav li a:hover {
+    color: purple;
+}
+
+nav li a:visited {
+    color: red;
+}
+
+nav li a:focus {
+    outline: 2px dashed black;
 }
 
 /* Style rules for main content */
@@ -78,7 +107,7 @@ nav li a {
 
 main {
     padding: 2%;
-    font-family: Verdana, Arial, sans-serif;
+    font-family: "Roboto", serif;
 }
 
 main p {
@@ -125,7 +154,7 @@ section {
 figcaption {
     color: #4477a6;
     font-size: 1rem;
-    font-family: 'Arial', sans-serif;
+    font-family: "Roboto", serif;
     line-height: 1.5;
 }
 
@@ -183,13 +212,61 @@ columns / rows
     background-color: #e0e0e0;
 }
 
+
 /* Mobile Viewport (Responsive Design) */
 @media (max-width: 767px) {
     .row {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .col-md-6 {
         flex: 0 0 100%;
+    }
+}
+
+/* Tablet Viewport */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 720px;
+    }
+
+    .col-md-6 {
+        flex: 0 0 50%;
+    }
+}
+
+/* Desktop Viewport */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .container {
+        width: 960px;
+    }
+}
+
+/* Large Desktop Viewport */
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+/* Print View */
+@media print {
+    .container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .row {
+        display: block;
+    }
+
+    .col-md-6 {
+        flex: 0 0 100%;
+        padding: 0;
+    }
+
+    .bg-color1,
+    .bg-color2 {
+        background-color: #fff !important;
     }
 }
